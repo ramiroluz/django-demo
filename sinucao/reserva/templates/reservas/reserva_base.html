@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}{{block.super}} - Home{% endblock %}
+{% block css.extra %}{{block.super}}{% endblock css.extra %}
+{% block js.extra %}{{block.super}}{% endblock js.extra %}
+{% block content %}
+
+
+<h1>{{ reserva }}</h1>
+
+<p>Data de registro da reserva: {{ reserva.data_reserva }}</p>
+<p>Data de uso da mesa: {{ reserva.data_jogo }}</p>
+
+{% endblock %}

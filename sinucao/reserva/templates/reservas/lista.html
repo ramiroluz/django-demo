@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}{{block.super}} - Home{% endblock %}
+{% block css.extra %}{{block.super}}{% endblock css.extra %}
+{% block js.extra %}{{block.super}}{% endblock js.extra %}
+{% block content %}
+
+{% if lista_clientes %}
+    <ul>
+    {% for cliente in lista_clientes %}
+        <li><a href="{% url 'reservas:cliente' cliente.id %}">{{ cliente }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhum cliente cadastrado..</p>
+{% endif %}
+{% endblock %}

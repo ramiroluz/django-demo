@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{{block.super}} - Home{% endblock %}
+{% block css.extra %}{{block.super}}{% endblock css.extra %}
+{% block js.extra %}{{block.super}}{% endblock js.extra %}
+{% block content %}
+
+
+<h1>{{ cliente }}</h1>
+
+<p>Data do registro: {{ cliente.data_registro }}</p>
+<p>Endereço: {{ cliente.endereco }}</p>
+<p>Gênero: {{ cliente.genero }}</p>
+<p>Celular: {{ cliente.celular }}</p>
+
+{% endblock %}

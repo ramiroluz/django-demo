@@ -1,0 +1,10 @@
+{% if lista_clientes %}
+    <ul>
+    {% for cliente in lista_clientes %}
+        <li><a href="{% url 'reservas:cliente' cliente.id %}">{{ cliente }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhum cliente cadastrado..</p>
+{% endif %}
+
